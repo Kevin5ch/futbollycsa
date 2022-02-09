@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from torneo.views import fixture, index
+from torneo.views import fixture, index, posiciones
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path('fixture/', fixture, name="fixture"),
+    path('posiciones/', posiciones, name="posiciones")
 ]

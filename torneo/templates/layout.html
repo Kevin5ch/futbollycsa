@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Soccer BootStrap HTML5 CSS3 Theme</title>
+	<title>{% block title %} Inicio {% endblock %} - Fútbol Lartirigoyen</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -33,7 +33,7 @@
 				<span id="tg-close" class="tg-close fa fa-close"></span>
 				<div class="tg-colhalf">
 					<ul>
-						<li><a href="contactus.html">Inicio</a></li>
+						<li><a href="{% url 'index' %}">Inicio</a></li>
 						<li class="active menu-item-has-children">
 							<a href="#">Main</a>
 							<ul class="tg-dropdown-menu">
@@ -153,7 +153,7 @@
 								<div id="tg-navigation" class="tg-navigation">
 									<div class="tg-colhalf">
 										<ul>
-											<li><a href="contactus.html">Inicio</a></li>
+											<li><a href="{% url 'index' %}">Inicio</a></li>
 											{% comment %} <li class="active">
 												<a href="#">Main</a>
 												<ul class="tg-dropdown-menu">
@@ -167,8 +167,8 @@
 									</div>
 									<div class="tg-colhalf">
 										<ul>
-											<li><a href="contactus.html">Fixture</a></li>
-											<li><a href="contactus.html">Posiciones</a></li>
+											<li><a href="{% url 'fixture' %}">Fixture</a></li>
+											<li><a href="{% url 'posiciones' %}">Posiciones</a></li>
 											<li><a href="contactus.html">Resultados</a></li>
 										</ul>
 									</div>

@@ -6,4 +6,7 @@ def index(request):
   return render(request,'index.html')
 
 def fixture(request):
-  return HttpResponse("Fixture")
+  return render(request,'fixture.html')
+
+def posiciones(request):
+  return render(request,'posiciones.html')
