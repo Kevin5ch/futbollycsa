@@ -10,3 +10,12 @@ def fixture(request):
 
 def posiciones(request):
   return render(request,'posiciones.html')
+
+def resultados(request):
+  return render(request,'resultados.html')
+
+def blog(request):
+  return render(request,'blog.html')
+
+def torneo(request):
+  return render(request,'torneo.html')

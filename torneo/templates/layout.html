@@ -161,15 +161,15 @@
 													<li><a href="index2.html">home2</a></li>
 												</ul>
 											</li> {% endcomment %}
-											<li><a href="contactus.html">Torneo</a></li>
-											<li><a href="contactus.html">Blog</a></li>
+											<li><a href="{% url 'torneo' %}">Torneo</a></li>
+											<li><a href="{% url 'blog' %}">Blog</a></li>
 										</ul>
 									</div>
 									<div class="tg-colhalf">
 										<ul>
 											<li><a href="{% url 'fixture' %}">Fixture</a></li>
 											<li><a href="{% url 'posiciones' %}">Posiciones</a></li>
-											<li><a href="contactus.html">Resultados</a></li>
+											<li><a href="{% url 'resultados' %}">Resultados</a></li>
 										</ul>
 									</div>
 								</div>

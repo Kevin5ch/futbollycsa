@@ -2,9 +2,27 @@
 {% load static %}
 
 {% block title %} Posiciones {% endblock %}
-
+{% block slider %}
+  <div class="tg-banner tg-haslayout">
+    <div class="tg-imglayer">
+      <img src="images/bg-pattran.png" alt="image desctription">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="tg-banner-content tg-haslayout">
+          <div class="tg-pagetitle">
+            <h1>Posiciones</h1>
+          </div>
+          <ol class="tg-breadcrumb">
+            <li><a href="#">Posiciones</a></li>
+            <li class="active">Equipos</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
 {% block main %}
-
   <section class="tg-main-section tg-haslayout" id="points_table" name="points_table">
     <div class="tg-bgboxone"></div>
     <div class="tg-bgboxtwo"></div>
@@ -136,5 +154,4 @@
       </div>
     </div>
   </section>
-
 {% endblock %}
