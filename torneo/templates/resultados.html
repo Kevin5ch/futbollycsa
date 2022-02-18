@@ -1,11 +1,11 @@
 {% extends 'layout.html' %}
-
+{% load static %}
 {% block title %} Resultados {% endblock title %}
 
 {% block slider %}
   <div class="tg-banner tg-haslayout">
     <div class="tg-imglayer">
-      <img src="images/bg-pattran.png" alt="image desctription">
+      <img src="{% static 'images/bg-pattran.png' %}" alt="image desctription">
     </div>
     <div class="container">
       <div class="row">
@@ -38,7 +38,7 @@
                   <div class="tg-score"><h3>4 - 3</h3></div>
                   <div class="tg-teamscore">
                     <strong class="tg-team-logo">
-                      <a href="#"><img src="images/team-logo/logo-01.png" alt="image description"></a>
+                      <a href="#"><img src="{% static 'images/team-logo/logo-01.png' %}" alt="image description"></a>
                     </strong>
                     <div class="tg-team-nameplusstatus">
                       <h4><a href="#">Gladiators ( Win )</a></h4>
@@ -53,7 +53,7 @@
                   <div class="tg-teamscore">
                     <strong class="tg-team-logo">
                       <a href="#">
-                        <img src="images/team-logo/logo-02.png" alt="image description">
+                        <img src="{% static 'images/team-logo/logo-01.png' %}" alt="image description">
                       </a>
                     </strong>
                     <div class="tg-team-nameplusstatus">

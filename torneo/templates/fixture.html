@@ -1,10 +1,10 @@
 {% extends 'layout.html' %}
-
+{% load static %}
 {% block title %} Fixture {% endblock title %}
 {% block slider %}
   <div class="tg-banner tg-haslayout">
     <div class="tg-imglayer">
-      <img src="images/bg-pattran.png" alt="image desctription">
+      <img src="{% static 'images/bg-pattran.png' %}" alt="image desctription">
     </div>
     <div class="container">
       <div class="row">
