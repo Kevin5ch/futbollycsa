@@ -19,3 +19,18 @@ class Temporada(models.Model):
 
   def __str__(self) -> str:
       return f"{self.name}"
+
+class Cancha(models.Model):
+  name = models.CharField(verbose_name="Nombre de la cancha", max_length=128)
+  description = models.TextField(verbose_name="Descripcion")
+  updated_at = models.DateTimeField(auto_now=True, verbose_name="Ultima actualizacion")
+  created_at = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacion")
+  active = models.BooleanField(verbose_name="Activo")
+
+  class Meta:
+    verbose_name = "Cancha"
+    verbose_name_plural = "Canchas"
+    ordering = ['-name']
+
+  def __str__(self) -> str:
+      return f"{self.name}"
