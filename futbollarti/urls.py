@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 from torneo.views import fixture, index, posiciones, resultados, blog, torneo
 
 
@@ -27,3 +28,8 @@ urlpatterns = [
     path('blog/', blog, name="blog"),
     path('torneo/', torneo, name="torneo"),
 ]
+
+#Config for image upload in develop mode
+if settings.DEBUG:
+  from django.conf.urls.static import static
+  urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
