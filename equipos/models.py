@@ -17,4 +17,4 @@ class Equipo(models.Model):
 
 
   def __str__(self) -> str:
-    return f"{self.name} ({self.alias})"
+    return f"{self.name}"

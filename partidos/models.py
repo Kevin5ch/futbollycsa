@@ -1,5 +1,6 @@
 from tabnanny import verbose
 from django.db import models
+from django.core.exceptions import ValidationError
 from equipos.models import Equipo
 from torneo.models import Cancha, Temporada
 from jugadores.models import Jugador
@@ -29,7 +30,12 @@ class Partido(models.Model):
     ordering = ['-date']
 
   def __str__(self) -> str:
-    return f"{self.date}"
+    return f"{self.local} vs {self.visit}  ({(self.date).strftime('%d/%m/%Y')})"
+
+  def clean(self):
+    if self.local.id == self.visit.id:
+      #print(f"Local -> {self.local.id}, visitante -> {self.visit.id}")
+      raise ValidationError("Los equipos del partido deben ser diferentes")
 
 class Gol(models.Model):
   player = models.ForeignKey(Jugador, on_delete=models.SET_NULL, null=True, verbose_name="Jugador")
