@@ -40,7 +40,8 @@ class Partido(models.Model):
 class Gol(models.Model):
   player = models.ForeignKey(Jugador, on_delete=models.SET_NULL, null=True, verbose_name="Jugador")
   match = models.ForeignKey(Partido, on_delete=models.SET_NULL, null=True, verbose_name="Partido")
-  goal_against = models.BooleanField(verbose_name="Gol en contra")
+  goal_against = models.BooleanField(verbose_name="En contra")
+  quantity = models.IntegerField(default=1, verbose_name="Gol / es")
   updated_at = models.DateTimeField(auto_now=True, verbose_name="Ultima actualizacion")
   created_at = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacion")
   active = models.BooleanField(verbose_name="Activo", default=True)
